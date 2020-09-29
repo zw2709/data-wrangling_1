@@ -1,3 +1,3 @@
-# data-wrangling_1
+# data-wrangling
 
-This is The repository for data wrangling 1, part of p8105
+This is The repository for data wrangling , part of p8105
