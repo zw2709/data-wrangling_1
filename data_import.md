@@ -238,3 +238,24 @@ pulse_df
     ##  9 10091  76.0 male             0            3            4            0
     ## 10 10092  74.2 female          10            2           11            6
     ## # ... with 1,077 more rows
+
+## Comparison with Base R
+
+what about ‘read.csv’—nuver use
+
+``` r
+litters_base = read.csv('data/FAS_litters.csv')
+litters_readr = read_csv('data/FAS_litters.csv')   # read this
+```
+
+    ## Parsed with column specification:
+    ## cols(
+    ##   Group = col_character(),
+    ##   `Litter Number` = col_character(),
+    ##   `GD0 weight` = col_double(),
+    ##   `GD18 weight` = col_double(),
+    ##   `GD of Birth` = col_double(),
+    ##   `Pups born alive` = col_double(),
+    ##   `Pups dead @ birth` = col_double(),
+    ##   `Pups survive` = col_double()
+    ## )
