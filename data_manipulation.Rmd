@@ -7,3 +7,59 @@ output: github_document
 library(tidyverse)
 ```
 
+## Load in the FAS Litters data
+
+```{r}
+litters_df = read.csv('./data/FAS_litters.csv')
+litters_df = janitor:: clean_names(litters_df)
+```
+
+```{r}
+litters_df
+```
+
+
+## 'Select'
+
+Choose some columns and not others.
+
+```{r}
+select(litters_df, group, gd0_weight)
+select(litters_df, group, gd0_weight:gd_of_birth)
+select(litters_df, -litter_number)
+```
+
+
+
+
+
+Renaming columns
+```{r}
+select(litters_df, GROUP = group, LITTer_NUMBER = litter_number)
+```
+```{r} 
+rename(litters_df, GGRROUP = group)  #same as before
+```
+
+use ?select_helpers
+
+
+```{r}
+select(litters_df, starts_with('gd'))
+```
+
+
+```{r}
+select(litters_df, litter_number, everything())
+```
+
+
+```{r}
+relocate(litters_df, litter_number)  #same as before
+```
+
+
+
+
+
+
